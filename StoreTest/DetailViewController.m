@@ -31,6 +31,8 @@
         // Set the item title from the detailItem dictionary's 'title' key
         self.titleLabel.text = [self.detailItem valueForKey:@"title"];
         
+        self.title = self.titleLabel.text;
+        
         // Set the formatted price with tax by looking at the key path in the detailItem dictionary
         self.priceLabel.text = [self.detailItem valueForKeyPath:@"price.data.formatted.with_tax"];
         
